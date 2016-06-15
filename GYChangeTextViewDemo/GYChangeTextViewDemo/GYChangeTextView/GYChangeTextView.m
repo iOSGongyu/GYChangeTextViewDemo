@@ -45,7 +45,7 @@ typedef NS_ENUM(NSUInteger, GYTitlePosition) {
         self.bottomPosition = CGPointMake(self.frame.size.width/2, self.frame.size.height/2*3);
         self.shouldStop = NO;
         _textLabel = [[UILabel alloc] init];
-        _textLabel.layer.bounds = CGRectMake(0, 0, frame.size.width, frame.size.height);
+        _textLabel.layer.bounds = CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame));
         _textLabel.layer.position = self.middlePosition;
         _textLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:_textLabel];
@@ -112,20 +112,3 @@ typedef NS_ENUM(NSUInteger, GYTitlePosition) {
 }
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
